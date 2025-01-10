@@ -1,0 +1,246 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr 350px; /* Sidebar - Main - User Panel */
+    grid-template-rows: auto;
+    height: 100vh;
+    width: 100vw; /* Gunakan lebar penuh */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #ddd;
+}
+
+
+.logo img {
+    width: 200px;
+    height: 66px;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.menu a.active, .menu a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.logout {
+    color: #000000;
+    text-decoration: none;
+    margin-top: auto;
+    font-size: 18px;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.icons span {
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle input:checked + .slider {
+    background-color: #000000;
+}
+
+/* Products */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 produk dalam satu baris */
+    grid-auto-rows: 1fr; /* Produk rata tinggi */
+    gap: 20px;
+    padding: 30px;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    height: 200px; /* Tetapkan tinggi tetap agar rapi */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+}
+
+.product button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.product button:hover {
+    background-color: #000000;
+}
+
+/* User Panel */
+.user-panel {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+
+.orders .order {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    gap: 15px; /* Jarak antara gambar dan teks */
+}
+
+.orders .order img {
+    width: 50px; /* Ukuran gambar */
+    height: 50px;
+    border-radius: 5px; /* Sudut membulat pada gambar */
+    object-fit: cover; /* Memastikan gambar rapi */
+}
+
+.orders .order span {
+    font-size: 16px; /* Ukuran teks */
+    color: #333;
+}
+
+.checkout {
+    width: 100%;
+    padding: 15px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.checkout:hover {
+    background-color: #000000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* 2 produk dalam satu baris */
+        grid-auto-rows: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .products {
+        grid-template-columns: 1fr; /* 1 produk dalam satu baris */
+    }
+
+    .sidebar, .user-panel {
+        display: none;
+    }
+}
