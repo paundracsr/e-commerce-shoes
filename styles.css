@@ -51,11 +51,10 @@ body {
 }
 
 .logout {
-   
-  
     color: #000000;
-    border: none;
- 
+    text-decoration: none;
+    margin-top: auto;
+    font-size: 18px;
 }
 
 
