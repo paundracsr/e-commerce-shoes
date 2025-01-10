@@ -51,11 +51,19 @@ body {
 }
 
 .logout {
-     color: #fff;
-    text-decoration: none;
-    margin-top: auto;
-    font-size: 18px;
+    width: 100%;
+    padding: 15px;
     background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.logout:hover {
+    background-color: #2a2a2a;
 }
 
 
@@ -222,7 +230,7 @@ body {
 }
 
 .checkout:hover {
-    background-color: #000000;
+    background-color: #2a2a2a;
 }
 
 /* Responsive Adjustments */
