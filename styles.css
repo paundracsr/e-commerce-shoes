@@ -51,20 +51,14 @@ body {
 }
 
 .logout {
-    width: 100%;
-    padding: 15px;
-    background-color: #000000;
-    color: #fff;
+   
+  
+    color: #000000;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
+ 
 }
 
-.logout:hover {
-    background-color: #2a2a2a;
-}
+
 
 
 /* Header */
